@@ -11,16 +11,26 @@ public class Veiculo {
 	int qtdEixos;
 	String tipoCarroceria;
 	float capacidadeCarga;
+	float pesoEixo;
 	
 	
-	
-	
-	
+	public float getPesoEixo() {
+		return pesoEixo;
+	}
+	public 
+	float setPesoEixo(float pesoEixo) {
+		if (qtdEixos > 0) {
+			this.pesoEixo = pesoEixo;
+			return pesoEixo;
+		}
+		return 0;
+	}
+		
+	// Não é necessário setId na classe veículo uma vez que no banco de dados
+	// o Id será autoincrementado;
 	public int getId() {
 		return id;
 	}
-	// Não é necessário setId na classe veículo uma vez que no banco de dados
-	// o Id será autoincrementado;
 	public float getPeso() {
 		return peso;
 	}

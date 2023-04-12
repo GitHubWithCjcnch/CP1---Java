@@ -5,6 +5,7 @@ public class Pedido {
 	int clienteId;
 	String nomeCliente;
 	String tipoTerreno;
+	String clima;
 	String enderecoLocal;
 	String enderecoOrigem;
 	String status;
@@ -15,6 +16,12 @@ public class Pedido {
 	}
 	public int getClienteId() {
 		return clienteId;
+	}
+	public String getClima() {
+		return clima;
+	}
+	public void setClima(String clima) {
+		this.clima = clima;
 	}
 	public String getNomeCliente() {
 		return nomeCliente;
