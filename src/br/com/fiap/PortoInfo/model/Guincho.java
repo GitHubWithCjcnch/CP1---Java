@@ -17,8 +17,8 @@ public class Guincho {
 	float capacidadeCarga = veiculo.capacidadeCarga;
 	float pesoEixo = veiculo.getPesoEixo();
 	
-	String clima = pedido.clima;
-	String tipoTerreno = pedido.tipoTerreno;
+	String clima = pedido.clima.toLowerCase(); // em graus celsius
+	String tipoTerreno = pedido.tipoTerreno.toLowerCase();
 	
 	
 	public String pesoGuincho(float peso, int qtdEixos, boolean chassiAlongado, float capacidadeCarga) {
@@ -34,7 +34,17 @@ public class Guincho {
 	}
 	
 	public String tipoCorda(String clima, String tipoTerreno) {
-		if (tipoTerreno == "lama" || tipoTerreno == 'detritos' || tipoTerreno == 'pedras')
+		if (clima == "calor" || clima == "ensolarado" || clima == "quente") {
+			System.out.println("Neste calor é necessário utilizar um cabo de Aço, é mais resistênte.");
+		} else {
+			System.out.println("De qualquer forma, o sintético é mais viável em outras situações do que o calor.");
+		}
+		if (tipoTerreno == "lama" || tipoTerreno == "detritos" || tipoTerreno == "pedras") {
+			return "Já que o veículo do cliente está em um terreno de " + tipoTerreno + " é mais viável um guincho com um cabo SINTÉTICO. Mas caso o cabo esteja muito utilizado devido a grande exposição ao Sol, recomendamos que utilize um cabo de AÇO.";
+		} else if (tipoTerreno == "areia" || tipoTerreno == "asfalto" || tipoTerreno == "terra") {
+			return "Já que o veículo do cliente está em um terreno de " + tipoTerreno + " é mais viável um guincho com um cabo de AÇO.";
+		}
+		return "Valores inválidos no tipo de terreno";
 	}
 	
 

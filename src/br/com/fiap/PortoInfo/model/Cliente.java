@@ -6,6 +6,16 @@ public class Cliente {
 	String endereco;
 	String email;
 	String telefone;
+	
+	
+	public String showInfoClient(int cpf, String nome, String endereco, String email, String telefone) {
+		String result = "Segue as informações acerca do cliente " + nome + System.lineSeparator() + 
+				"cpf: " + Integer.toString(cpf) + System.lineSeparator() +
+				"email: " + email + System.lineSeparator() + 
+				"telefone: " + telefone;
+		return result;
+	}
+	
 	public int getCpf() {
 		return cpf;
 	}
