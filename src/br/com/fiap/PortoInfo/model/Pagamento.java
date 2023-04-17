@@ -6,6 +6,14 @@ public class Pagamento {
 	String metodoPagamento;
 	String status;
 	
+	public String identificarPagamento(int id, String status) {
+		return Integer.toString(id) + " <- Identificador geral / Status -> "+ status;
+		
+	}
+	public String dadosPagamento(String metodoPagemento, float valor) {
+		return metodoPagamento + " <- Metodo de pagamento/ valor -> "+ Float.toString(valor);
+		
+	}
 	public int getId() {
 		return id;
 	}

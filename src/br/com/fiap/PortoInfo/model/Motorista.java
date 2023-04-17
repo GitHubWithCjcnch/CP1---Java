@@ -6,6 +6,14 @@ public class Motorista {
 	String telefone;
 	boolean disponibilidade;
 	
+	public String dadosDisponibilidade(String nome, boolean disponibilidade) {
+		return nome+ "<- Nome Motorista / Disponivel? -> "+ Boolean.toString(disponibilidade);
+	}
+	
+	public String identificarMotorista(int id, String nome, String telefone) {
+		return Integer.toString(id) + " <- Identificador geral / Nome e telefone -> "+ nome + " - " + telefone;
+		
+	}
 	public int getId() {
 		return id;
 	}

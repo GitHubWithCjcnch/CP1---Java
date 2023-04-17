@@ -6,6 +6,14 @@ public class Caminhao {
 	boolean disponibilidade;
 	String modelo;
 	
+	public String dadosDisponibilidade(String modelo, boolean disponibilidade) {
+		return modelo + "<- Modelo/ Disponivel? -> "+ Boolean.toString(disponibilidade);
+	}
+	
+	public String dadosBasicosCaminhao(float peso, String modelo) {
+		return  modelo + " <- Modelo do veiculo / Peso do veiculo -> "+ Float.toString(peso);
+	}
+	
 	public int getId() {
 		return id;
 	}

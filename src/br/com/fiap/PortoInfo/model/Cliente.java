@@ -16,6 +16,7 @@ public class Cliente {
 		return result;
 	}
 	
+	
 	public int getCpf() {
 		return cpf;
 	}

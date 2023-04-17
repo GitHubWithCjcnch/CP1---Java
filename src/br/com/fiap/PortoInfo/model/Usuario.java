@@ -9,6 +9,18 @@ public class Usuario {
 	String loginStatus;
 	Date registerDate = new Date();
 	
+	public String dadosConta(String login, String senha) {
+		return login + " <- Login / Senha -> "+ senha;
+	}
+	
+	public String dadosAcesso(String loginStatus, String dataFormatada) {
+		return loginStatus + " <- Status de login/ Registro de acesso -> "+ dataFormatada;
+		
+	}
+	
+	public String identificarUsuario(int id, int clienteId) {
+		return login + "<- Login/  Identificador geral e Identificar Cliente-> "+ Integer.toString(id) + " - " + Integer.toString(clienteId);
+	}
 	
 	public int getId() {
 		return id;

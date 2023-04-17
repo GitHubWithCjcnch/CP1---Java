@@ -151,6 +151,6 @@ public class main {
 		} else {
 			System.out.println("VALOR INVÁLIDO. Digite um valor entre 1 e 5");
 		}
-		
+		objInput.close();
 	}
 }
