@@ -14,6 +14,22 @@ public class Veiculo {
 	float pesoEixo;
 	
 	
+	public String identificarVeiculo(int id, String placa, String modelo) {
+		return placa + " - " + modelo + " <- PLaca e modelo do veiculo / Identificador geral -> "+ Integer.toString(id);
+	}
+	
+	public String dadosBasicosVeiculo(float peso, float comprimento, float altura) {
+		return Float.toString(comprimento) + " - " + Float.toString(altura) + " <- Comprimento e altura do veiculo / Peso do veiculo -> "+ Float.toString(peso);
+	}
+	
+	public String dadosResgate(float capacidadeCarga, String tipoCarroceria, boolean chassiAlongado) {
+		return tipoCarroceria + " - " + Float.toString(capacidadeCarga)+ "<- Tipo de carroceria e capacidade de carga do veiculo / Chassi Alongado? -> "+ Boolean.toString(chassiAlongado);
+	}
+	
+	public String dadosEixo(float qtdEixosF, float pesoEixo) {
+		return pesoEixo + "<- Peso Eixo / Quantidade de eixos -> "+ qtdEixosF;
+	}
+	
 	public float getPesoEixo() {
 		return pesoEixo;
 	}
@@ -61,7 +77,7 @@ public class Veiculo {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public boolean isChassiAlongado() {
+	public boolean getChassiAlongado() {
 		return chassiAlongado;
 	}
 	public void setChassiAlongado(boolean chassiAlongado) {

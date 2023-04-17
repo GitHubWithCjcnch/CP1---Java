@@ -8,7 +8,7 @@ public class Cliente {
 	String telefone;
 	
 	
-	public String showInfoClient(int cpf, String nome, String endereco, String email, String telefone) {
+	public String showInfoClient(int cpf, String nome, String email, String telefone) {
 		String result = "Segue as informações acerca do cliente " + nome + System.lineSeparator() + 
 				"cpf: " + Integer.toString(cpf) + System.lineSeparator() +
 				"email: " + email + System.lineSeparator() + 

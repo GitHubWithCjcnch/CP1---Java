@@ -11,6 +11,25 @@ public class Pedido {
 	String status;
 	
 	
+	public String rota(String enderecoOrigem, String enderecoLocal) {
+		return enderecoOrigem + " <- de / para -> "+ enderecoLocal;
+	}
+	
+	public String tipoLocal(String tipoTerreno, String clima) {
+		return tipoTerreno + " <- Tipo de terreno do local / Clima do local -> "+ clima;
+		
+	}
+	
+	public String identificarCliente(int id, int clienteId) {
+		return Integer.toString(id) + " <- Identificador geral / Identificador cliente -> " + Integer.toString(clienteId);
+	}
+	
+	
+	public String atualizacaoPedido(String nomeCliente, String status) {
+		return nomeCliente + " <- Nome do cliente / Status do pedido -> "+ status;
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
