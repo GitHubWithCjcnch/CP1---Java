@@ -1,5 +1,8 @@
 package br.com.fiap.PortoInfo.model;
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 
 public class Usuario {
 	int id;
@@ -8,6 +11,9 @@ public class Usuario {
 	String senha;
 	String loginStatus;
 	Date registerDate = new Date();
+	
+	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
+    String dataFormatada = dateFormat.format(registerDate);
 	
 	public String dadosConta(String login, String senha) {
 		return login + " <- Login / Senha -> "+ senha;
